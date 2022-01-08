@@ -1,0 +1,12 @@
+{
+  "web": {
+    "client_id": "931332243540-p7bd5ttti5fm3lkon1t0vf0bncth6kdu.apps.googleusercontent.com",
+    "project_id": "more-and-high",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "l2OSTce3USmZsQu40YFVLEe5",
+    "redirect_uris": ["http://localhost:3000"],
+    "javascript_origins": ["http://localhost:3000"]
+  }
+}
