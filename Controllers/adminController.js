@@ -70,7 +70,7 @@ exports.generateToken = async (req, res, next) => {
 
     const fileUrl =
       process.env.NODE_ENV === "production"
-        ? `https://more-and-high-server.herokuapp.com/token/${fileName}`
+        ? `https://more-and-high.herokuapp.com/token/${fileName}`
         : `http://localhost:8000/token/${fileName}`;
 
     res.status(200).json({
