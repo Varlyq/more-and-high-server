@@ -8,4 +8,8 @@ router.route("/").get(mainController.validateToken, controller.getUserData);
 router.route("/:id/images").get(controller.getUserImagesById);
 router.route("/:id/locations").get(controller.getUserLocationsById);
 
+router
+  .route("/deviceUser")
+  .post(mainController.validateToken, mainController.sendMessageToDevice);
+
 module.exports = router;
