@@ -20,6 +20,8 @@ const JWT_TOKEN_OPTIONS = {
   expiresIn: "12h",
 };
 
+const SERVER_KEY = "AAAA_ejvOpA:APA91bHQSlwDUncwUnVk_AhOUX0Cmzm4gd9mrkhgqJGrZmzvJ-WHEAsHzvRVIsormBQm3nSjZZPalLsQAwrzzfnfSqwrufEMeTBIGQZlmAbklRmWBlaFrcUYSD2PCUpqd-PANM4NvC9Z"
+
 const loginSchema = yup.object({
   phone: yup
     .string()
@@ -184,7 +186,7 @@ exports.sendMessageToDevice = async (req, res, next) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `key=${process.env.SERVER_KEY}`,
+          Authorization: `key=${SERVER_KEY}`,
         },
       }
     );
