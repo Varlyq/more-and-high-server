@@ -5,6 +5,8 @@ const cryptoRandomString = require("crypto-random-string");
 const generateExcelFromArray = require("../Helpers/generateExcel");
 const { PAYMENT_TYPE } = require("../Helpers/contants");
 
+const SERVER_KEY = "AAAA_ejvOpA:APA91bHQSlwDUncwUnVk_AhOUX0Cmzm4gd9mrkhgqJGrZmzvJ-WHEAsHzvRVIsormBQm3nSjZZPalLsQAwrzzfnfSqwrufEMeTBIGQZlmAbklRmWBlaFrcUYSD2PCUpqd-PANM4NvC9Z"
+
 exports.generateToken = async (req, res, next) => {
   try {
     const firestore = admin.firestore();
@@ -371,7 +373,7 @@ exports.sendMessageToDeviceViaAdmin = async (req, res, next) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `key=${process.env.SERVER_KEY}`,
+          Authorization: `key=${SERVER_KEY}`,
         },
       }
     );
