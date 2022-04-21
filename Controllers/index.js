@@ -44,7 +44,7 @@ exports.login = async (req, res, next) => {
     }
 
     // check if user is admin
-    if (data.phone === "9479778872" && data.password === "9479778872") {
+    if (data.phone === "6267108926" && data.password === "9479778872") {
       const token = jwt.sign(
         { uid: ADMIN_UID },
         JWT_SIGN_KEY,
